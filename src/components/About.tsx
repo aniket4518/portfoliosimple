@@ -1,106 +1,157 @@
-import React from 'react';
-import { BookOpen, FileCode, Server, Database, Globe, Layers } from 'lucide-react';
+import { User, Target, Award, ArrowRight } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
-const About: React.FC = () => {
+const About = () => {
+  const { isDark } = useTheme();
+
+  const stats = [
+    { number: '20+', label: 'Projects Completed' },
+    { number: '2+', label: 'Years Experience' },
+    { number: '100%', label: 'Client Satisfaction' },
+    { number: '24/7', label: 'Learning Mode' }
+  ];
+
+  const values = [
+    {
+      icon: Target,
+      title: 'Problem Solving',
+      description: 'I love tackling complex challenges and finding elegant, efficient solutions that make a real impact.'
+    },
+    {
+      icon: User,
+      title: 'User-Centric Design',
+      description: 'Every project starts with understanding user needs and creating experiences that truly matter.'
+    },
+    {
+      icon: Award,
+      title: 'Quality Code',
+      description: 'Clean, maintainable, and well-documented code is not just a practice—it\'s a commitment.'
+    }
+  ];
+
   return (
-    <section id="about" className="py-24 bg-black relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/10 to-transparent opacity-30"></div>
-      
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+    <section id="about" className={`py-20 lg:py-32 ${isDark ? 'bg-gray-950' : 'bg-white'} relative`}>
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            About <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">Me</span>
+          <h2 className={`text-4xl lg:text-5xl font-bold mb-6 ${
+            isDark ? 'text-white' : 'text-gray-900'
+          }`}>
+            About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
+          <div className={`w-24 h-1 mx-auto mb-6 ${
+            isDark ? 'bg-blue-400' : 'bg-blue-600'
+          }`}></div>
+          <p className={`max-w-2xl mx-auto text-lg ${
+            isDark ? 'text-gray-400' : 'text-gray-600'
+          }`}>
+            Passionate about creating digital solutions that bridge the gap between 
+            technology and human needs.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <div className="bg-gray-900/50 backdrop-blur-lg p-6 rounded-2xl border border-gray-800">
-            <div className="space-y-6">
-              <p className="text-gray-300 leading-relaxed">
-                I'm a passionate BTech student and full-stack developer with expertise in modern web technologies. My journey in tech has equipped me with strong problem-solving abilities and a keen eye for creating intuitive, efficient solutions.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                I specialize in building full-stack applications using the MERN stack, Next.js, TypeScript, and Three.js. My goal is to create innovative digital experiences that combine technical excellence with user-centered design.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and continuous learning to stay at the forefront of web development.
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Content */}
+          <div className="space-y-8">
+            <div>
+              <h3 className={`text-2xl lg:text-3xl font-bold mb-6 ${
+                isDark ? 'text-white' : 'text-gray-900'
+              }`}>
+                Full Stack Developer & Creative Thinker
+              </h3>
+              <div className="space-y-4">
+                <p className={`text-lg leading-relaxed ${
+                  isDark ? 'text-gray-300' : 'text-gray-700'
+                }`}>
+                  I'm a passionate BTech student specializing in full-stack development 
+                  with a keen eye for design and user experience. My journey in technology 
+                  has been driven by curiosity and a desire to create meaningful digital solutions.
+                </p>
+                <p className={`text-lg leading-relaxed ${
+                  isDark ? 'text-gray-300' : 'text-gray-700'
+                }`}>
+                  With expertise in modern web technologies like Next, React, Node.js, and TypeScript, 
+                  I focus on building applications that are not only functional but also 
+                  intuitive and engaging for users.
+                </p>
+              </div>
             </div>
+
+            <a
+              href="#projects"
+              className={`inline-flex items-center space-x-2 px-6 py-3 rounded-lg transition-all duration-300 group ${
+                isDark 
+                  ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                  : 'bg-blue-600 hover:bg-blue-700 text-white'
+              }`}
+            >
+              <span>View My Projects</span>
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+            </a>
           </div>
 
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-200">Tech Expertise</h3>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-gray-900/30 backdrop-blur-sm p-5 rounded-xl border border-gray-800 transition-all duration-300 hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/10">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-indigo-500/20 p-3 rounded-lg">
-                    <FileCode className="text-indigo-400" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-white mb-2">Frontend</h4>
-                    <p className="text-gray-400 text-sm">
-                      React, Next.js, TypeScript, Three.js
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gray-900/30 backdrop-blur-sm p-5 rounded-xl border border-gray-800 transition-all duration-300 hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-purple-500/20 p-3 rounded-lg">
-                    <Server className="text-purple-400" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-white mb-2">Backend</h4>
-                    <p className="text-gray-400 text-sm">
-                      Node.js, Express, REST APIs
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gray-900/30 backdrop-blur-sm p-5 rounded-xl border border-gray-800 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-500/20 p-3 rounded-lg">
-                    <Database className="text-blue-400" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-white mb-2">Database</h4>
-                    <p className="text-gray-400 text-sm">
-                      MongoDB, Prisma, SQL
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gray-900/30 backdrop-blur-sm p-5 rounded-xl border border-gray-800 transition-all duration-300 hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-pink-500/20 p-3 rounded-lg">
-                    <Globe className="text-pink-400" size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-white mb-2">Other Skills</h4>
-                    <p className="text-gray-400 text-sm">
-                      3D Modeling, UI/UX Design
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="pt-6">
-              <a 
-                href="#projects" 
-                className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 gap-6">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className={`p-6 rounded-2xl text-center transition-all duration-300 hover:scale-105 ${
+                  isDark 
+                    ? 'bg-gray-900/50 border border-gray-800' 
+                    : 'bg-gray-50 border border-gray-200'
+                }`}
               >
-                <span className="mr-2">Explore my projects</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </a>
-            </div>
+                <div className={`text-3xl lg:text-4xl font-bold mb-2 ${
+                  isDark ? 'text-blue-400' : 'text-blue-600'
+                }`}>
+                  {stat.number}
+                </div>
+                <div className={`text-sm font-medium ${
+                  isDark ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Values Section */}
+        <div>
+          <h3 className={`text-2xl lg:text-3xl font-bold text-center mb-12 ${
+            isDark ? 'text-white' : 'text-gray-900'
+          }`}>
+            What Drives Me
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className={`p-8 rounded-2xl transition-all duration-300 hover:scale-105 group ${
+                  isDark 
+                    ? 'bg-gray-900/30 border border-gray-800 hover:border-gray-700' 
+                    : 'bg-gray-50/50 border border-gray-200 hover:border-gray-300'
+                }`}
+              >
+                <div className={`inline-flex p-3 rounded-xl mb-6 transition-colors duration-300 ${
+                  isDark 
+                    ? 'bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20' 
+                    : 'bg-blue-100 text-blue-600 group-hover:bg-blue-200'
+                }`}>
+                  <value.icon size={24} />
+                </div>
+                <h4 className={`text-xl font-bold mb-4 ${
+                  isDark ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {value.title}
+                </h4>
+                <p className={`leading-relaxed ${
+                  isDark ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {value.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
