@@ -114,7 +114,7 @@ const Hero = () => {
           </a>
           
           <a 
-            href="https://cal.com/aniketkumarjha" 
+            href="https://cal.com/aniket-jha-dev/15min" 
             target="_blank"
             rel="noopener noreferrer"
             className={`group px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center space-x-2 shadow-lg ${
@@ -123,12 +123,13 @@ const Hero = () => {
             }`}
           >
             <Calendar className="w-5 h-5" />
-            <span>Book Now</span>
+            <span>Book a meeting</span>
           </a>
           
           <a 
-            href="/resume.pdf"
-            download
+            href="https://drive.google.com/uc?export=download&id=16JcyKujCzvc5B9Ly-ReGPKnncYH6xPla"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`px-8 py-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 flex items-center justify-center space-x-2 backdrop-blur-sm border ${
               isDark ? 'bg-white/5 border-white/10 text-white hover:bg-white/10' 
                      : 'bg-white/60 border-white/80 text-slate-700 hover:bg-white/80'
@@ -142,8 +143,8 @@ const Hero = () => {
         {/* Social Links */}
         <div className="flex justify-center space-x-4 mb-16">
           {[
-            { icon: Github, href: 'https://github.com', label: 'GitHub' },
-            { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+            { icon: Github, href: 'https://github.com/aniket4518/', label: 'GitHub' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/aniket-jha-9264422b7/', label: 'LinkedIn' },
             { icon: Mail, href: 'mailto:jhaaniket2005@gmail.com', label: 'Email' }
           ].map((social) => (
             <a

@@ -5,15 +5,14 @@ const ScrollProgress = () => {
 
   return (
     <>
-      {/* Scroll Progress Bar */}
+    
       <div className="fixed top-0 left-0 w-full h-1 bg-neutral-200 dark:bg-neutral-800 z-50">
         <div
           className="h-full bg-gradient-to-r from-primary-500 to-accent-500 transition-all duration-300 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
-      
-      {/* Scroll Progress Circle (Optional - for modern feel) */}
+     
       <div className="fixed bottom-8 right-8 w-12 h-12 z-40 hidden lg:block">
         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
           <path

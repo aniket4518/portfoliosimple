@@ -5,9 +5,9 @@ const About = () => {
   const { isDark } = useTheme();
 
   const stats = [
-    { number: '20+', label: 'Projects Completed' },
+    { number: '10+', label: 'Projects Completed' },
     { number: '2+', label: 'Years Experience' },
-    { number: '100%', label: 'Client Satisfaction' },
+    { number: '20+', label: 'Technologies Mastered' },
     { number: '24/7', label: 'Learning Mode' }
   ];
 

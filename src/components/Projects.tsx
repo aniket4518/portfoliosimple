@@ -23,62 +23,92 @@ const Projects = () => {
   const { isDark } = useTheme();
 
   const projects: Project[] = [
-    {
+     {
       id: 1,
+      title: 'ScaryDraw',
+      description: 'Real-time collaborative whiteboard with 3D drawing capabilities and multi-user synchronization.',
+      longDescription: 'CollabDraw 3D is an innovative collaborative drawing platform that combines traditional 2D whiteboard functionality with immersive 3D drawing capabilities. Built with real-time synchronization, multiple users can collaborate simultaneously in both 2D and 3D spaces, making it perfect for creative teams, educators, and remote collaboration.',
+      image: 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      technologies: ['React', 'Three.js', 'Socket.io', 'Node.js', 'WebRTC', 'Canvas API', 'TypeScript'],
+      demoLink: '#',
+      codeLink: 'https://github.com/aniket4518/scarydraw',
+      category: 'web',
+      status: 'in-progress',
+      year: '2025',
+      features: ['Real-time collaboration', '3D drawing tools', 'Multi-user sync', 'Cross-platform support', 'Voice chat integration', 'Export to multiple formats']
+    },
+    {
+      id: 2,
+      title: 'WebMaker AI',
+      description: 'An AI-powered web app generator that creates fully functional applications from natural language prompts.',
+      longDescription: 'WebMaker AI is a revolutionary tool that leverages artificial intelligence to transform simple human prompts into complete, functional web applications. Using advanced language models and code generation techniques, it understands user requirements and automatically generates clean, production-ready code with modern frameworks and best practices.',
+      image: 'https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      technologies: ['OpenAI API', 'React', 'Node.js', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Python'],
+      demoLink: 'https://webmaker-nine.vercel.app/',
+      codeLink: 'https://github.com/aniket4518/webmaker',
+      category: 'ai',
+      status: 'completed',
+      year: '2025',
+      features: ['Natural language processing', 'Automated code generation', 'Multiple frameworks support', 'Real-time preview', 'Export to GitHub', 'Best practices enforcement']
+    },
+    {
+      id: 3,
       title: 'FarmConnect',
       description: 'A MERN stack platform connecting farmers directly with customers for fresh produce sales.',
       longDescription: 'FarmConnect is a comprehensive web application that bridges the gap between farmers and consumers. Built with the MERN stack, it features real-time inventory management, secure payment processing, and a sophisticated matching algorithm that connects buyers with nearby farmers.',
       image: 'https://images.pexels.com/photos/2382665/pexels-photo-2382665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Redux', 'Stripe API'],
-      demoLink: '#',
-      codeLink: '#',
+      demoLink: 'https://farmconnect-2ifj-nth3dgr9l-aniket-jhas-projects-781a05b8.vercel.app/',
+      codeLink: 'https://github.com/aniket4518/farmconnect',
       category: 'web',
       status: 'completed',
-      year: '2024',
+      year: '2025',
       features: ['Real-time inventory', 'Payment integration', 'Location-based matching', 'Mobile responsive']
     },
     {
-      id: 2,
+      id: 4,
       title: 'MazeGame 3D',
       description: 'An immersive 3D maze game with dynamic level generation and stunning visuals.',
       longDescription: 'Experience an innovative 3D maze game built with Three.js that pushes the boundaries of web-based gaming. Features procedurally generated mazes, realistic physics, and stunning visual effects that create a unique experience every time you play.',
       image: 'https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       technologies: ['Three.js', 'WebGL', 'JavaScript', 'GSAP', 'Web Audio API'],
       demoLink: '#',
-      codeLink: '#',
+      codeLink: 'https://github.com/aniket4518/maze-run-game',
       category: 'game',
       status: 'completed',
-      year: '2023',
+      year: '2024',
       features: ['Procedural generation', '3D graphics', 'Physics engine', 'Audio integration']
     },
     {
-      id: 3,
-      title: 'E-Commerce Pro',
-      description: 'A modern e-commerce platform with advanced features and seamless user experience.',
-      longDescription: 'A full-featured e-commerce solution built with modern technologies. Includes advanced search, recommendation engine, real-time chat support, and comprehensive admin dashboard for managing products, orders, and analytics.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-      demoLink: '#',
-      codeLink: '#',
-      category: 'web',
-      status: 'in-progress',
-      year: '2024',
-      features: ['Advanced search', 'Recommendation engine', 'Real-time chat', 'Analytics dashboard']
+      id: 5,
+      title: 'Game-Based Portfolio',
+      description: 'An interactive 3D portfolio experience with gamified navigation and immersive storytelling.',
+      longDescription: 'A unique portfolio website that transforms the traditional portfolio experience into an interactive game. Built with Three.js and React Three Fiber, this project showcases skills and projects through an engaging 3D environment with custom animations, interactive elements, and smooth transitions that make exploring a portfolio feel like playing a game.',
+      image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      technologies: ['React', 'Three.js', 'React Three Fiber', 'GSAP', 'WebGL', 'TypeScript', 'Blender'],
+      demoLink: 'https://akj-3d.vercel.app/',
+      codeLink: 'https://github.com/aniket4518/portfolio',
+      category: 'game',
+      status: 'completed',
+      year: '2025',
+      features: ['3D interactive environment', 'Gamified navigation', 'Custom animations', 'Immersive storytelling', 'WebGL graphics', 'Responsive controls']
     },
+     
     {
-      id: 4,
+      id: 6,
       title: 'AI Hotel Assistant',
       description: 'Intelligent hotel booking system with AI-powered recommendations and automation.',
       longDescription: 'An advanced AI-powered hotel booking assistant that leverages machine learning to provide personalized recommendations, automate booking processes, and offer 24/7 customer support through natural language processing.',
       image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       technologies: ['Python', 'OpenAI API', 'FastAPI', 'React', 'PostgreSQL', 'Docker'],
       demoLink: '#',
-      codeLink: '#',
+      codeLink: 'https://github.com/aniket4518/hotelbookingtrail',
       category: 'ai',
       status: 'concept',
-      year: '2024',
+      year: '2025',
       features: ['AI recommendations', 'Natural language processing', 'Automated booking', 'Price prediction']
-    }
+    },
+
   ];
 
   const filteredProjects = activeFilter === 'all' 
