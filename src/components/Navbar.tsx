@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/aniket4518', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:jhaaniket2005@gmail.com', label: 'Email' },
   ];
